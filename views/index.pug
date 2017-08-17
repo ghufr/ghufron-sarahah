@@ -37,12 +37,13 @@ block content
               h4.card-title Ghufron Fikrianto
               p.card-text.lead Graphic Designer x Developer
               p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              img(src='/images/instagram.png' id='social')
-              img(src='/images/facebook.png' id='social')
-              img(src='/images/twitter.png' id='social')
+              #social-container
+                img(src='/images/instagram.png' id='social')
+                img(src='/images/facebook.png' id='social')
+                img(src='/images/twitter.png' id='social')
           form
             .form-group
               label(for='exampleInputEmail1') Leave a constructive message :)
               textarea#exampleFormControlTextarea1.form-control(rows='10')
 
-            button.btn.btn-primary(type='submit') Submit
+            button.btn.btn-primary(type='submit' id='button-submit') Submit

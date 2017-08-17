@@ -7,7 +7,7 @@ section{
 }
 .navbar-brand{
   font-weight: 400;
-  font-size: 32px !important;
+  font-size: 30px;
   font-family: 'Roboto', sans-serif !important;
 }
 .col-md-4{
@@ -38,4 +38,30 @@ margin: auto;
 }
 .container{
   margin: auto;
+}
+
+@media only screen and (max-width : 768px) {
+  section{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .card-body{
+    padding: 1rem !important;
+  }
+  .card-title , .card-text, .form-group, #social-container{
+    text-align: center;
+  }
+  #button-submit{
+    width: 100%;
+  }
+  .navbar-brand{
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+    font-size: 24px;
+  }
+  .col-md-8{
+    padding-top: 16px;
+  }
+
 }
