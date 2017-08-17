@@ -1,0 +1,41 @@
+
+section{
+  margin-top: 120px;
+}
+#nav-logo{
+  width: 36px;
+}
+.navbar-brand{
+  font-weight: 400;
+  font-size: 32px !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.col-md-4{
+text-align: center;
+}
+
+.col-md-8{
+margin: auto;
+}
+.card-body{
+  padding: 3rem !important;
+}
+
+#social{
+  margin-right: 16px;
+  width: 30px;
+}
+
+#profile{
+  width: 200px;
+}
+
+.form-group{
+  margin-top: 32px;
+}
+.form-control{
+    background-color: #e6f2ff !important;
+}
+.container{
+  margin: auto;
+}
