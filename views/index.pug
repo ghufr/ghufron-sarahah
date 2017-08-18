@@ -3,7 +3,9 @@ extends layout
 block navbar
   nav.navbar.navbar-primary.navbar-fixed-top.bg-primary.navbar-expand-lg.animated.slideInDown
     div.container
-      a.navbar-brand.text-light(href='/') Sarahaha
+      a.navbar-brand.text-light(href='/')
+        img.d-inline-block.align-top(src='images/paper-plane.png', width="30", height="30", alt="")
+        |   Sarahaha
       //
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
@@ -45,10 +47,10 @@ block content
                 a(href='https://twitter.com/ghufronfikri')
                   img.animated.fadeIn(src='/images/twitter.png' id='social')
 
-          form(action='',id='msg-form', name='msg-form')
+          form(action='/',id='msg-form', name='msg-form', method='post')
             .form-group
               label(for='exampleInputEmail1') Leave a constructive message :)
-              textarea#message-box.form-control(type='text' name='message-box' rows='10', maxlength='500')
+              textarea#message.form-control(type='text' name='message' rows='10', maxlength='500')
 
             div.alert.alert-warning.hidden(role='alert' id='alert-box')
 

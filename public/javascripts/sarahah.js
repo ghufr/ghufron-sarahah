@@ -1,32 +1,50 @@
-// $(function () {
-//   $('#msg-form').parsley().on('field:validated', function() {
-//     var ok = $('.parsley-error').length === 0;
-//     $('.bs-callout-info').toggleClass('hidden', !ok);
-//     $('.bs-callout-warning').toggleClass('hidden', ok);
-//   })
-//   .on('form:submit', function() {
-//     return false; // Don't submit form for this demo
-//   });
-// });
-
 $(document).ready(function(){
+  // $('#button-submit').click(function (){
+    // $("#message").each(function(){
+    //     if ($.trim($(this).val()).length == 0){
+    //         $('.alert').show();
+    //         $("#message").focus();
+    //         return false;
+    //     }
+    //     else{
+    //         // $(this).removeClass("highlight");
+    //         $('.alert').hide();
+    //         // isFormValid = true;
+    //         return true;
+    //      }
+    //     });
+  //
+  //
+  // });
 
-  $('#button-submit').click(function (){
-    // var form_data = $('#msg-form').find('textarea[name="message-box"]').val();
-    $("#message-box").each(function(){
-        if ($.trim($(this).val()).length == 0){
-            $('.alert').show();
-            // $(this).addClass("highlight");
-            // isFormValid = false;
+  $('#msg-form').submit(function(e){
+    e.preventDefault();
+      $('#message').each(function(){
+          if ($.trim($(this).val()).length == 0){
+            $(".alert").attr('class', 'alert alert-warning').show();
+              $("#message").focus();
+              return false;
+          }
+          else{
+              $('.alert').hide();
+              var msg = $('#message').val();
+              // $.post( "/", { message:msg } );
 
-        }
-        else{
-            // $(this).removeClass("highlight");
-            $('.alert').hide();
-            // isFormValid = true;
-         }
-        });
+              $.post( "/",{ message:msg })
+              .done(function(){
+                $(".alert").attr('class', 'alert alert-success').show();
+                $('#msg-form')[0].reset();
+              })
 
-    return false;
+              .fail(function() {
+                $(".alert").attr('class', 'alert alert-danger').show();
+              });
+
+
+
+              return true;
+           }
+          });
+
   });
 });
