@@ -38,12 +38,21 @@ block content
               p.card-text.lead Graphic Designer x Developer
               p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               #social-container
-                img(src='/images/instagram.png' id='social')
-                img(src='/images/facebook.png' id='social')
-                img(src='/images/twitter.png' id='social')
-          form
+                a(href='https://www.instagram.com/ghufronfikri/')
+                  img(src='/images/instagram.png' id='social')
+                a(href='https://www.facebook.com/ghufronfr')
+                  img(src='/images/facebook.png' id='social')
+                a(href='https://twitter.com/ghufronfikri')
+                  img(src='/images/twitter.png' id='social')
+
+          form(action='',id='msg-form')
             .form-group
               label(for='exampleInputEmail1') Leave a constructive message :)
-              textarea#exampleFormControlTextarea1.form-control(rows='10')
+              textarea#message-box.form-control(type='text' name='message-box' rows='10')
 
-            button.btn.btn-primary(type='submit' id='button-submit') Submit
+            button.btn.btn-primary( id='button-submit') Submit
+
+        #success_message.alert.alert-success(role='alert')
+          | Success
+          i.glyphicon.glyphicon-thumbs-up
+          |  Thanks for contacting us, we will get back to you shortly.
