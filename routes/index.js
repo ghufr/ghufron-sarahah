@@ -10,9 +10,7 @@ app.use(expressValidator());
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Sarahaha - Ghufron Fikrianto ' });
-  io.on('connection', function(socket){
-    console.log('a user connected');
-  })
+  res.set('Cache-Control', 'public, max-age=31557600');
 });
 
 router.post('/msg', function(req, res, next) {
