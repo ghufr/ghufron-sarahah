@@ -3,7 +3,7 @@ extends layout
 block navbar
   nav.navbar.navbar-primary.navbar-fixed-top.bg-primary.navbar-expand-lg
     div.container
-      a.navbar-brand.text-light Sarahaha
+      a.navbar-brand.text-light(href='/') Sarahaha
       //
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
@@ -45,14 +45,15 @@ block content
                 a(href='https://twitter.com/ghufronfikri')
                   img(src='/images/twitter.png' id='social')
 
-          form(action='',id='msg-form')
+          form(action='',id='msg-form', data-parsley-validate='')
             .form-group
               label(for='exampleInputEmail1') Leave a constructive message :)
-              textarea#message-box.form-control(type='text' name='message-box' rows='10')
+              textarea#message-box.form-control(type='text' name='message-box' rows='10', required='', data-parsley-maxlength='500', maxlength='500')
 
             button.btn.btn-primary( id='button-submit') Submit
 
-        #success_message.alert.alert-success(role='alert')
-          | Success
-          i.glyphicon.glyphicon-thumbs-up
-          |  Thanks for contacting us, we will get back to you shortly.
+        //
+          #success_message.alert.alert-success.bs-callout.bs-callout-info.hidden(role='alert')
+            | Success
+            i.glyphicon.glyphicon-thumbs-up
+            |  Thanks for contacting us, we will get back to you shortly.
