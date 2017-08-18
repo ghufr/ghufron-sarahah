@@ -67,3 +67,6 @@ margin: auto;
 }
 
 /*#success_message{ display: none;}*/
+.alert{
+  display: none;
+}

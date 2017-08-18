@@ -1,7 +1,7 @@
 extends layout
 
 block navbar
-  nav.navbar.navbar-primary.navbar-fixed-top.bg-primary.navbar-expand-lg
+  nav.navbar.navbar-primary.navbar-fixed-top.bg-primary.navbar-expand-lg.animated.slideInDown
     div.container
       a.navbar-brand.text-light(href='/') Sarahaha
       //
@@ -28,7 +28,7 @@ block navbar
 block content
   section
     div.container
-      div.card
+      div.card.animated.zoomIn
         div.card-body
           div.row
             div.col-md-4
@@ -45,12 +45,20 @@ block content
                 a(href='https://twitter.com/ghufronfikri')
                   img(src='/images/twitter.png' id='social')
 
-          form(action='',id='msg-form', data-parsley-validate='')
+          form(action='',id='msg-form', name='msg-form')
             .form-group
               label(for='exampleInputEmail1') Leave a constructive message :)
-              textarea#message-box.form-control(type='text' name='message-box' rows='10', required='', data-parsley-maxlength='500', maxlength='500')
+              textarea#message-box.form-control(type='text' name='message-box' rows='10', maxlength='500')
+
+            div.alert.alert-warning.hidden(role='alert' id='alert-box')
+
+              strong Holy guacamole!
+              |  Write something please :)
 
             button.btn.btn-primary( id='button-submit') Submit
+
+
+
 
         //
           #success_message.alert.alert-success.bs-callout.bs-callout-info.hidden(role='alert')
