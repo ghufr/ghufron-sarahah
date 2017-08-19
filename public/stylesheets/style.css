@@ -71,8 +71,15 @@ margin: auto;
   display: none;
 }
 #form-container{
-  
+
 }
 #form-login{
+  margin: 0 auto;
+}
+#card-msg{
+  margin-top: 16px;
+}
+
+#profile-admin{
   margin: 0 auto;
 }

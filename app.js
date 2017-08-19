@@ -9,6 +9,7 @@ var admin = require("firebase-admin");
 
 var index = require('./routes/index');
 var login = require('./routes/login');
+var adm = require('./routes/admin');
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use('/scripts', express.static(__dirname + '/node_modules/bootstrap/dist/'))
 
 app.use('/', index);
 app.use('/login', login);
+app.use('/admin', adm);
 
 
 
