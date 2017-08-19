@@ -8,7 +8,7 @@ var expressValidator = require('express-validator');
 var admin = require("firebase-admin");
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var login = require('./routes/login');
 
 var app = express();
 
@@ -34,16 +34,17 @@ app.use('/scripts', express.static(__dirname + '/node_modules/popper.js/dist/'))
 app.use('/scripts', express.static(__dirname + '/node_modules/bootstrap/dist/'));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/login', login);
+
 
 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  // var err = new Error('Not Found');
-  // err.status = 404;
-  // next(err);
-  res.redirect('/');
+   var err = new Error('Not Found');
+   err.status = 404;
+   next(err);
+  //res.redirect('/');
 });
 
 // error handler

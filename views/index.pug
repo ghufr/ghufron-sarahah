@@ -1,32 +1,5 @@
 extends layout
 
-block navbar
-  nav.navbar.navbar-primary.navbar-fixed-top.bg-primary.navbar-expand-lg.animated.slideInDown
-    div.container
-      a.navbar-brand.text-light(href='/')
-        img.d-inline-block.align-top(src='images/paper-plane.png', width="30", height="30", alt="")
-        |   Sarahaha
-      //
-        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-
-        #navbarSupportedContent.collapse.navbar-collapse.justify-content-end
-
-          ul.nav.justify-content-end.navbar-nav
-            li.nav-item
-              a.nav-link(href='#')
-                img(src='http://via.placeholder.com/30x30')
-
-            li.nav-item
-              a.nav-link(href='#')
-                img(src='http://via.placeholder.com/30x30')
-
-
-              li.nav-item
-                a.nav-link(href='#')
-                  img(src='http://via.placeholder.com/30x30')
-
-
 block content
   section
     div.container

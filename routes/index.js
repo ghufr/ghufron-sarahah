@@ -27,6 +27,12 @@ router.get('/', function(req, res, next) {
 
 });
 
+// app.get('/login', function(req, res, next) {
+//   console.log('Login from index');
+//   res.render('login');
+//
+// });
+
 router.post('/', function(req, res, next) {
 
   // var result = req.checkBody('.message', 'Invalid message').notEmpty();
